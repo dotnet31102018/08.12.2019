@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="dataApp">
+
+<head>
+    <title>Clock!</title>
+    <script src="angular.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="data.service.js"></script>
+    <script src="globalconst.service.js"></script>
+    <script src="appfactory.service.js"></script>
+    <script src="service.service.js"></script>
+    <script src="parentCtrl.js"></script>
+</head>
+
+<body>
+
+    <div ng-controller="parentCtrl">
+        <p>Data from value service : <b>{{num}}</b></p>
+        <p>Data from const service: <b>{{app_name}}</b></p>
+        <p>function result factory service 90 * 90 : <b>{{result}}</b></p>
+        <p>function result from service 90 * 90 * 90: <b>{{result3}}</b></p>
+
+        <table border="1">
+            <tr style="background:lightyellow ; padding: 10px">
+                <th>USER-ID</th>
+                <th>ID</th>
+                <th>TITLE</th>
+                <th>COMPLETED</th>
+            </tr>
+            <tr ng-repeat="m in todos">
+                <td>{{m.userId}}</td>
+                <td>{{m.id}}</td>
+                <td>{{m.title}}</td>
+                <td>{{m.completed}}</td>
+            </tr>
+        </table>
+
+
+
+    </div>
+
+
+    <br>
+</body>
+
+</html>
